@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700&family=Montserrat:wght@300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none !important;
+    transition: all .3s linear;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.theme-bg {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+/*common css end*/
+
+
+
+/*banner area start*/
+
+.banner-theme-bg {
+    height: 100vh;
+}
+
+.banner-area {
+    position: relative;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 99999;
+
+}
+
+.navbar .navbar-nav {
+    margin-top: 50px;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.navbar .navbar-nav .nav-item:nth-of-type(5) {
+    margin-right: 0;
+}
+
+.navbar .navbar-nav .nav-item icon i {
+    background: white;
+    font-size: 52px;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    color: black;
+    display: block;
+    transition: all linear .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover i {
+    background: yellow;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .icon .active {
+    background: yellow;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    padding: 10px 30px 20px 30px;
+    line-height: 1;
+    background: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    position: relative;
+    transition: all linear .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover .nav-link {
+    background: yellow;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .active {
+    background: yellow;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 1px;
+    background: #dadada;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear .3s;
+}
+
+.navbar .navbar-nav .nav-item:hover .nav-link::before {
+    background: #fff;
+}
+
+
+.banner-text {
+    text-align: center;
+}
+
+.banner-text h2 {
+    font-size: 28px;
+    color: white;
+    font-weight: 300;
+    font-family: 'Montserrat Alternates';
+}
+
+.banner-text h1 {
+    font-size: 64px;
+    color: #d8b572;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+.banner-text h3 {
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+    font-family: 'Montserrat Alternates';
+    position: relative;
+}
+
+.banner-text h3::before {
+    position: absolute;
+    content: '';
+    right: 469px;
+    top: 55px;
+    width: 150px;
+    height: 3px;
+    background: #d8b572;
+}
+
+.banner-text h4 {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    line-height: 36px;
+    padding: 0 186px;
+    margin-top: 50px;
+}
+
+.banner-text .contact {
+    margin-top: 100px;
+}
+
+.banner-text p .phone {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin-top: 250px;
+    padding: 0 30px;
+}
+
+.banner-text p .phone i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.banner-text p .mail {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin-top: 150px;
+    padding: 0 30px;
+}
+
+.banner-text p .mail i {
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+/*banner area end*/
+
+
+
+/*service area start*/
+
+.service-area {
+    position: relative;
+    margin-top: 100px;
+}
+
+.service-area .section-title h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: #aaaaaa;
+
+}
+
+.service-area .section-title h2 {
+    font-size: 32px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #222222;
+
+}
+
+.service-area .service-details {
+    margin-top: 130px;
+}
+
+.service-details h2 {
+    font-size: 32px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #222222;
+    margin-top: 60px;
+}
+
+.service-details h2::before {
+    position: absolute;
+    content: '';
+    left: 146px;
+    top: 247px;
+    width: 50px;
+    height: 3px;
+    background: #d8b572;
+}
+
+.service-details p {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #222222;
+    margin-top: 60px;
+}
+
+/*service area end*/
+
+/*portfolio area start*/
+.port-area {
+    position: relative;
+    margin-top: 100px;
+}
+
+.port-area .section-title h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: #aaaaaa;
+
+}
+
+.port-button a {
+    color: white;
+    background: #967637;
+    padding: 12px 30px;
+    border-radius: 22px;
+    font-size: 22px;
+}
+
+/*portfolio area end*/
+
+
+/*about area start*/
+.about-area {
+    position: relative;
+    margin-top: 100px;
+}
+
+.about-area .section-title h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: #aaaaaa;
+
+}
+
+.about-area .about-images {
+    position: absolute;
+}
+
+.about-images .one {
+    position: absolute;
+    top: 94px;
+    z-index: 999;
+    margin-left: 71px;
+}
+
+.about-images .two {
+    position: absolute;
+    z-index: 99999;
+    top: -213px;
+    left: -44px;
+}
+
+.about-images .three {
+    position: absolute;
+    top: -82px;
+    z-index: 9999999;
+    margin-left: 154px;
+    width: 106%;
+}
+
+.about-area p {
+    margin-left: -55px;
+    margin-right: 90px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+    color: #444444;
+}
+
+.about-area p.one {
+    margin-bottom: 30px;
+}
+
+/*about area end*/
+
+
+/*client area start*/
+.client-area {
+    position: relative;
+    margin-top: 100px;
+}
+
+.client-area .section-title h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: #aaaaaa;
+    margin-top: 250px;
+}
+
+.client-details {
+    margin-top: 50px;
+}
+.client-details .client{
+    margin-bottom: 30px;
+}
+.client-details .client:hover{
+    color: black;
+}
+
+/*client area end*/
