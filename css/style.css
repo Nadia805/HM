@@ -1,6 +1,27 @@
+/*google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700&family=Montserrat:wght@300;400;500&display=swap');
+/*google fonts*/
 
 
+
+/*variable part*/
+:root {
+    --red-color: #2a237e;
+}
+.banner-text h1{
+     color: var(--red-color);
+}
+.banner-text h3::before{
+    background: var(--red-color);
+}
+.service-area ul li {
+    color: var(--red-color);
+}
+
+/*variable part end*/
+
+
+/*common css start*/
 * {
     margin: 0;
     padding: 0;
@@ -32,79 +53,103 @@ button:focus {
 
 
 
-/*banner area start*/
-
-.banner-theme-bg {
-    height: 100vh;
+/*color picker css*/
+.color-picker{
+    background: #896d36;
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(100%,-50%);
+    z-index: 999999;
+    transition: all .3s linear;
 }
-
-.banner-area {
-    position: relative;
+.color-picker.active{
+    transform: translate(0%,-50%);
 }
-
-.navbar {
+.open-btn{
     position: absolute;
-    z-index: 99999;
-
+    right: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    background: #d8b572;
+    color: #342302;
+    border: 0;
+    z-index: 999999;
 }
 
-.navbar .navbar-nav {
-    margin-top: 50px;
+.open-btn i{
+    animation: spinAnim 5s infinite linear;
+}
+@keyframes spinAnim{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
 }
 
-.navbar .navbar-nav .nav-item {
+/*color picker css*/
+
+
+
+
+/*navbar css start*/
+
+.navbar-nav {
+    position: absolute;
+    z-index: 9999999;
+    background: transparent;
+    margin-left: 500px;
+    margin-top: 60px;
+}
+
+.navbar-nav .nav-item {
     margin-right: 20px;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 102px;
 }
 
-.navbar .navbar-nav .nav-item:nth-of-type(5) {
+.navbar-nav .nav-item:nth-of-type(5) {
     margin-right: 0;
 }
 
-.navbar .navbar-nav .nav-item icon i {
+.navbar-nav .nav-item .icon i {
     background: white;
-    font-size: 52px;
+    font-size: 22px;
     text-align: center;
-    padding: 10px 0 20px 0;
-    color: black;
+    padding: 5px 0 15px 0;
+    color: #896d36;
     display: block;
     transition: all linear .5s;
 }
 
-.navbar .navbar-nav .nav-item:hover i {
+.navbar-nav .nav-item:hover i {
+    background: #896d36;
+    color: white;
+}
+
+.navbar-nav .nav-item .icon .active {
     background: yellow;
     color: white;
 }
 
-.navbar .navbar-nav .nav-item .icon .active {
-    background: yellow;
-    color: white;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
+.navbar-nav .nav-item .nav-link {
     padding: 10px 30px 20px 30px;
     line-height: 1;
     background: white;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Montserrat';
     font-weight: 400;
     position: relative;
     transition: all linear .5s;
 }
 
-.navbar .navbar-nav .nav-item:hover .nav-link {
-    background: yellow;
-    color: white;
-}
-
-.navbar .navbar-nav .nav-item .active {
-    background: yellow;
-    color: white;
-}
-
-.navbar .navbar-nav .nav-item .nav-link::before {
+.navbar-nav .nav-item .nav-link::before {
     position: absolute;
     content: '';
     width: 50px;
@@ -116,13 +161,32 @@ button:focus {
     transition: all linear .3s;
 }
 
-.navbar .navbar-nav .nav-item:hover .nav-link::before {
+.navbar-nav .nav-item:hover .nav-link::before {
     background: #fff;
 }
 
+.navbar-brand {
+    margin-top: 25px;
+}
+
+/*navbar part end*/
+
+
+
+
+/*banner area start*/
+
+.banner-theme-bg {
+    height: 100vh;
+}
+
+.banner-area {
+    position: relative;
+}
 
 .banner-text {
     text-align: center;
+    margin-top: 130px;
 }
 
 .banner-text h2 {
@@ -134,7 +198,7 @@ button:focus {
 
 .banner-text h1 {
     font-size: 64px;
-    color: #d8b572;
+/*    color: #d8b572;*/
     font-weight: 500;
     font-family: 'Montserrat';
 }
@@ -154,7 +218,7 @@ button:focus {
     top: 55px;
     width: 150px;
     height: 3px;
-    background: #d8b572;
+/*    background: #d8b572;*/
 }
 
 .banner-text h4 {
@@ -248,13 +312,36 @@ button:focus {
     background: #d8b572;
 }
 
-.service-details p {
+.service-details ul {
+    margin-top: 30px;
+}
+
+.service-details li {
     font-size: 18px;
     font-family: 'Montserrat';
     font-weight: 400;
     color: #222222;
-    margin-top: 60px;
+    line-height: 2;
 }
+
+.service-details a {
+    color: #d8b572;
+}
+
+.service-details .one a {
+    position: absolute;
+    left: 145px;
+    bottom: -42px;
+}
+
+.service-details a:hover {
+    color: white;
+    background: #d8b572;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all .3s linear;
+}
+
 
 /*service area end*/
 
@@ -319,20 +406,25 @@ button:focus {
     position: absolute;
     top: -82px;
     z-index: 9999999;
-    margin-left: 154px;
+    margin-left: 144px;
     width: 106%;
 }
 
-.about-area p {
+.about-area .about-details {
     margin-left: -55px;
     margin-right: 90px;
     font-family: 'Montserrat';
     font-weight: 300;
     font-size: 16px;
     color: #444444;
+    display: inline-block;
 }
 
-.about-area p.one {
+.about-details .one {
+    margin-bottom: 30px;
+}
+
+.about-details .two {
     margin-bottom: 30px;
 }
 
@@ -356,11 +448,13 @@ button:focus {
 .client-details {
     margin-top: 50px;
 }
-.client-details .client{
+
+.client-details .client {
     margin-bottom: 30px;
 }
-.client-details .client:hover{
-    color: black;
+
+.client-details .client:hover {
+     filter: brightness(400%);
 }
 
 /*client area end*/
